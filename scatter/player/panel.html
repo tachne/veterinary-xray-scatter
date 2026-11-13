@@ -1,0 +1,52 @@
+<section class="film" aria-label="散乱線の連続再生">
+  <div class="toolbar" role="group" aria-label="再生操作">
+    <button type="button" class="play" data-c="play">▶ 再生</button>
+    <button type="button" data-c="pause">Ⅱ 一時停止</button>
+    <button type="button" data-c="stop">■ 停止・先頭へ</button>
+    <label>再生速度 <select aria-label="再生速度" data-c="speed"></select></label>
+  </div>
+  <div class="status"><strong data-c="state">準備完了</strong><span data-c="counter"></span>
+    <span data-c="seeds"></span></div>
+  <div class="track"><i data-c="progress"></i></div>
+  <dl class="history-counts" aria-label="再生と累積の本数">
+    <div><dt>再生済み / 再生対象</dt><dd data-c="played">0 / 0 個</dd></div>
+    <div><dt>累積飛跡</dt><dd data-c="retained">0 本</dd></div>
+    <div><dt>うち散乱線</dt><dd data-c="scattered">0 本</dd></div>
+  </dl>
+  <div class="stage" data-c="stage"></div>
+  <div class="room-intro" data-c="room-intro" hidden>
+    <div class="view-title">撮影室の累積飛跡</div>
+    <p class="room-line-key"><span>実線　計算した飛跡</span><span>破線　到達時の方向</span></p>
+    <small>検出器面より下は方向だけを示す仮想領域です。破線は左右とも同じ表示長で、実際の光子輸送の計算は検出器面までです。</small>
+    <div class="room-sources" data-c="room-sources" aria-label="飛跡の色"></div>
+  </div>
+  <div class="room-wrap" data-c="rooms">
+    <div class="surface"><strong data-c="room-label" hidden>グリッドなし <small data-c="room-arrivals-0"></small></strong><svg data-c="screen" aria-label="連続再生・撮影室の正面投影" role="group"></svg></div>
+    <div data-c="second-room" class="surface" hidden><strong>グリッドあり <small data-c="room-arrivals-1"></small></strong><svg data-c="screen-on" aria-label="グリッドあり・撮影室の正面投影" role="group"></svg></div>
+  </div>
+  <div class="landing" data-c="paired" hidden>
+    <div class="view-title">検出器面への到達位置と方向</div>
+    <div class="ray-key"><b>○ 一次線</b><b>◇ 散乱線</b><span>× 鉛箔吸収</span></div>
+    <div class="pairs">
+      <div class="case"><strong>グリッドなし</strong><svg data-c="landing-0" viewBox="0 0 340 104" role="img" aria-label="グリッドなし：累積した到達位置と方向"></svg><small data-c="land-count-0"></small></div>
+      <div class="case"><strong>グリッドあり</strong><svg data-c="landing-1" viewBox="0 0 340 104" role="img" aria-label="グリッドあり：累積した到達位置と方向"></svg><small data-c="land-count-1"></small></div>
+    </div>
+    <p class="guide-note">上段の×は鉛箔に吸収された横位置、横線は検出器面です。○・◇は計算上の到達位置、破線はその位置での進行方向です。モデルではグリッド出口と検出器面は同じ面（間隔 0 mm）です。破線の長さは飛行距離を表しません。</p>
+    <details data-c="down-zoom" class="zoom-window" open>
+      <summary>グリッド〜検出器間を拡大</summary>
+      <div class="pairs">
+        <div class="case"><strong>グリッドなし</strong><svg data-c="local-0" viewBox="0 0 340 212" role="img" aria-label="グリッドなし：入口から検出器までの拡大断面"></svg></div>
+        <div class="case"><strong>グリッドあり</strong><svg data-c="local-1" viewBox="0 0 340 212" role="img" aria-label="グリッドあり：鉛箔と出口の拡大断面"></svg></div>
+      </div>
+      <div class="local-note" data-c="local-note"></div>
+      <small>左・右は同じ光子、同じ尺度。濃い帯は鉛箔、すき間は中間物質。実線が飛跡です。薄緑の欄は方向を拡大して示します。</small>
+      <div class="examples" aria-label="再生標本から光子を選ぶ">
+        <button type="button" data-c="sample-primary">一次線の通過</button>
+        <button type="button" data-c="sample-block">散乱線の吸収</button>
+        <button type="button" data-c="sample-pass">散乱線の通過</button>
+      </div>
+    </details>
+  </div>
+  <p class="details" data-c="details" aria-live="polite"></p>
+  <div class="seek"><label>光子を選んで確認 <select aria-label="光子を選んで確認" data-c="seek"></select></label></div>
+</section>

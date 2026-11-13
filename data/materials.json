@@ -1,0 +1,58 @@
+{
+  "air": {
+    "name": "乾燥空気",
+    "density": 0.00120479,
+    "fractions": {
+      "C": 0.000124,
+      "N": 0.755267,
+      "O": 0.231781,
+      "Ar": 0.012827
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=104"
+  },
+  "water": {
+    "name": "液体水",
+    "density": 1.0,
+    "fractions": {
+      "H": 0.111894,
+      "O": 0.888106
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=276"
+  },
+  "al": {
+    "name": "アルミニウム",
+    "density": 2.6989,
+    "fractions": {
+      "Al": 1.0
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=013"
+  },
+  "pb": {
+    "name": "鉛",
+    "density": 11.35,
+    "fractions": {
+      "Pb": 1.0
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=082"
+  },
+  "pmma": {
+    "name": "ポリメタクリル酸メチル（PMMA）",
+    "density": 1.19,
+    "fractions": {
+      "H": 0.080538,
+      "C": 0.599848,
+      "O": 0.319614
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=223"
+  },
+  "pc": {
+    "name": "ポリカーボネート（PC）",
+    "density": 1.2,
+    "fractions": {
+      "H": 0.055491,
+      "C": 0.755751,
+      "O": 0.188758
+    },
+    "url": "https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=219"
+  }
+}
